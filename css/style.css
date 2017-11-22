@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "IBM Plex";
+    src: url("/fonts/IBMPlexSerif-MediumItalic.eot") format("eot"), url("fonts/IBMPlexSerif-MediumItalic.woff") format("woff"), url("fonts/IBMPlexSerif-MediumItalic.ttf") format("truetype");
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.heading {
+    font-family: "IBM Plex", Helvetica, sans-serif;
+    color: crimson;
+    font-size: 5em;
+    font-stretch: expanded;
+}
+
+.clock-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    padding: 5px;
+}
+
+.clock-base {
+    width: 250px;
+    height: 250px;
+    background-color: lightslategrey;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(41, 39, 39);
+}
+
+.clock-hour {
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: 128px;
+    width: 4px;
+    height: 65px;
+    background-color: #555;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    transform-origin: 2px 50px;
+    transition: .5s;
+    -webkit-animation: rotate-hour 43200s linear infinite;
+    -moz-animation: rotate-hour 43200s linear infinite;
+}
+
+.clock-minute {
+    position: absolute;
+    z-index: 3;
+    top: 60px;
+    left: 128px;
+    width: 4px;
+    height: 85px;
+    background-color: #555;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    transform-origin: 2px 70px;
+    transition: .5s;
+    -webkit-animation: rotate-minute 3600s linear infinite;
+    -moz-animation: rotate-minute 3600s linear infinite;
+}
+
+.clock-second {
+    position: absolute;
+    z-index: 4;
+    top: 20px;
+    left: 129px;
+    width: 2px;
+    height: 130px;
+    background-color: #a00;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    transform-origin: 1px 110px;
+    transition: .5s;
+    -webkit-animation: rotate-second 60s linear infinite;
+    -moz-animation: rotate-second 60s linear infinite;
+}
+
+.clock-second:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -5px;
+    bottom: 14px;
+    width: 8px;
+    height: 8px;
+}
+
+.clock-center {
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    top: 55px;
+    left: 55px;
+    background-image: linear-gradient( gray, #f7f7f7);
+    border-radius: 50%;
+}
+
+.clock-center:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 65px;
+    background-color: #000000 gray;
+    border-radius: 50%;
+}
