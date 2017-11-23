@@ -116,3 +116,35 @@ body {
     background-color: #000000 gray;
     border-radius: 50%;
 }
+
+.twelve {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    position: absolute;
+    top: 0%;
+    left: 40%;
+}
+
+.nine {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    position: absolute;
+    top: 40%;
+    left: 90%;
+}
+
+.six {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+}
+
+.three {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
